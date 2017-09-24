@@ -8,6 +8,12 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
   <link rel="stylesheet" href="screen.css" />
+  <style>
+  p.test {
+    width: 20em;
+    word-wrap: break-word;
+  }
+  </style>
 </head> <!---this closing tag wasnt here--->
 <body>
 <a href="http://example.com/index.html" rel="home">HTML Antipatterns</a>
@@ -29,7 +35,7 @@
       <h3><i>3rd-Year ITM Undergraduate</i></h3> <!---why italic??-->
       <h4>Majoring in Cybersecurity</h4><br /> <!--break tag?-->
       <!--Hint: Hard-wrap lines of text longer than 80–100 characters-->
-      <p>
+      <p class="test">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper risus eget magna suscipit,
         in blandit mauris aliquam. Donec ac elementum libero. Maecenas sit amet leo iaculis, pulvinar magna non,
         tristique justo. Sed iaculis odio nec suscipit malesuada.
@@ -37,18 +43,17 @@
       </p>
     </article>
     <!--Hint: Watch formatting, spacing, and tag completeness-->
-    <article>
+    <!--Deleted article: didn't seem necessary-->
       <class id="my dog">
-
         <figure>
           <img src="file:///Users/scarlethawk/Desktop/Photo%20Saves/DSC2235.JPEG" alt="Photo of Hank" /> <!--image was not put in correctly-->
             <figcaption>Hank hanging out on the couch AND being chill.</figcaption><!--no ampersand-->
         </figure> <!--misspelled figure-->
       </class>
-    </article>
-</main>
+
+  </main>
   <aside id="supporting">
-    <p><h2>Facts About Me</h2></p>
+    <h2>Facts About Me</h2> <!--Why a <p> and header tag??-->
     <!--Hint: Don't repeat classes on all inner elements that share a common parent-->
     <ul>
         <li class="quick-facts"><p><b>Quick Facts:</b></p>
