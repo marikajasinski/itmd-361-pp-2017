@@ -14,9 +14,9 @@
     word-wrap: break-word;
   }
   </style>
-</head> <!---this closing tag wasnt here--->
+</head> <!---this closing tag wasnt here-->
 <body>
-<a href="http://example.com/index.html" rel="home">HTML Antipatterns</a>
+<h1>HTML Antipatterns</h1> <!--made this just a header, not a link -->
   <header id="header">
     <nav id="navigation">
       <!--Hint: Match navigation labels with memorable paths/URLs-->
@@ -30,7 +30,8 @@
   </header>
   <!--Hint: Watch for duplicate and non-semantic classes and IDs-->
   <main id="content"> <!---changed home to content-->
-    <article id="primary" class="green-background">
+    <article>
+      <body style="background-color:green;"></body>
       <h2><b>About Me</b></h2>
       <h3><i>3rd-Year ITM Undergraduate</i></h3> <!---why italic??-->
       <h4>Majoring in Cybersecurity</h4><br /> <!--break tag?-->
@@ -44,19 +45,18 @@
     </article>
     <!--Hint: Watch formatting, spacing, and tag completeness-->
     <!--Deleted article: didn't seem necessary-->
-      <class id="my dog">
+      <class id="image">
         <figure>
-          <img src="file:///Users/scarlethawk/Desktop/Photo%20Saves/DSC2235.JPEG" alt="Photo of Hank" /> <!--image was not put in correctly-->
+          <img src="dsc2235.jpg" alt="Photo of Hank"> <!--image was not put in correctly and NO CAPS-->
             <figcaption>Hank hanging out on the couch AND being chill.</figcaption><!--no ampersand-->
         </figure> <!--misspelled figure-->
       </class>
-
   </main>
   <aside id="supporting">
     <h2>Facts About Me</h2> <!--Why a <p> and header tag??-->
     <!--Hint: Don't repeat classes on all inner elements that share a common parent-->
     <ul>
-        <li class="quick-facts"><p><b>Quick Facts:</b></p>
+        <li class="quick-facts"><b>Quick Facts:</b> <!--<p> tag isnt needed-->
         <li class="quick-facts">Interested in cybersecurity</li>
         <li class="quick-facts">Hate cold winters</li>
         <li class="quick-facts">Always running late</li></li>
